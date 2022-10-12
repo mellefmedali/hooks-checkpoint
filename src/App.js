@@ -1,9 +1,12 @@
 import MovieCard from "./components/MovieCard";
 function App() {
   return (
+    <>
+    <h1>Hooks Checkpoint Flix</h1>
     <div className="App">
       <MovieCard title="Titre du film" source="https://cdn.sortiraparis.com/images/58/77381/742135-ima-le-film-avec-dadju-djimo-et-karidja-toure-la-bande-annonce.jpg" rating="4,5"/>
     </div>
+    </>
   );
 }
 

@@ -18,7 +18,7 @@ export default function MovieCard(props) {
                 <Card.Body>
                     <Card.Title className="titleCard">{props.title}</Card.Title>
                 </Card.Body>
-                <Card.Footer><span>Rating : </span>{props.rating}/5</Card.Footer>
+                <Card.Footer><span className="spanFooterCard">Rating : </span><span className="ratingCard">{props.rating}</span>/5</Card.Footer>
             </Card>
         </CardGroup>
     )

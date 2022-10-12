@@ -3,29 +3,29 @@
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    background-color: grey;
-    height: 200px;
+    background-color: rgb(212, 212, 212);
+    height: 230px;
     width: 150px;
     border: 1px solid black;
     border-radius: 10px;
 }
-
 .titleCard {
     text-align: center;
-    /* padding-bottom: 5px; */
     font-style: oblique;
 }
-
 .ratingCard {
     font-size: small;
     margin: 0;
 }
-
 .photoCard {
     border: 1px blue solid;
-    width: 70%;
+    width: 80%;
+    margin-top: 5px;
 }
-
-Card.Footer span {
-    
+.spanFooterCard {
+font-size: smaller;
+}
+.ratingCard{
+    font-size: large;
+    color: rgb(0, 4, 255);
 }
