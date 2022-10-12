@@ -1,0 +1,31 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: grey;
+    height: 200px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.titleCard {
+    text-align: center;
+    /* padding-bottom: 5px; */
+    font-style: oblique;
+}
+
+.ratingCard {
+    font-size: small;
+    margin: 0;
+}
+
+.photoCard {
+    border: 1px blue solid;
+    width: 70%;
+}
+
+Card.Footer span {
+    
+}
