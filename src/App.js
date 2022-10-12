@@ -1,11 +1,27 @@
 import MovieCard from "./components/MovieCard";
+import { movieList } from "./components/MovieList";
+import { Button, CardGroup, Col, Container, Row } from "react-bootstrap";
+import "./App.css"
+import { useState } from "react";
+
+
+const listOfMovies = movieList;
 function App() {
   return (
     <>
-    <h1>Hooks Checkpoint Flix</h1>
-    <div className="App">
-      <MovieCard title="Titre du film" source="https://cdn.sortiraparis.com/images/58/77381/742135-ima-le-film-avec-dadju-djimo-et-karidja-toure-la-bande-annonce.jpg" rating="4,5"/>
-    </div>
+      <h1>Hooks Checkpoint Flix</h1>
+      <Button>Add movie</Button>
+      <Container >
+        <Row className="justify-content-md-center card-group">
+          {listOfMovies.map(e => {
+            return (
+              <MovieCard title={e.title} description={e.description}
+                posterURL={e.posterURL}
+                rating={e.rating} />
+            )
+          })}
+        </Row>
+      </Container>
     </>
   );
 }
