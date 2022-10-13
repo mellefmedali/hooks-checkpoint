@@ -1,6 +1,6 @@
+import { useState } from "react";
 
-export default function NewMovie(props) {
-
+const NewMovie = (props) => {
     return (
         <form>
             <label htmlFor="name">Film Title :</label>
@@ -31,7 +31,7 @@ export default function NewMovie(props) {
 
             <label htmlFor="rating">Movie rating :</label>
             <input
-                type="text"
+                type="number"
                 name="rating"
                 // value={props.rating}
                 onChange={props.handleRating}
@@ -40,3 +40,5 @@ export default function NewMovie(props) {
         </form>
     )
 }
+
+export default NewMovie
