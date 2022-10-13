@@ -10,7 +10,7 @@
 
 export const movieList = [
     {
-        title: "IMA", description: "This is a winning oscar movie! A must see masterpiece! Don't miss the chance to watch it!", posterURL: "https://cdn.sortiraparis.com/images/58/77381/742135-ima-le-film-avec-dadju-djimo-et-karidja-toure-la-bande-annonce.jpg", rating: "4,5"
+        title: "FIGHT CLUB", description: "This is a winning oscar movie! A must see masterpiece! Don't miss the chance to watch it!", posterURL: "https://www.researchgate.net/publication/309717420/figure/fig1/AS:425102790664192@1478363811754/Fight-Club-movie-poster-1999.png", rating: "4,5"
     },
     {
         title: "The Joker", description: "This is a winning oscar movie! A must see masterpiece! Don't miss the chance to watch it!", posterURL: "https://images.affiches-et-posters.com//albums/3/56170/affiche-film-joker.jpg", rating: "4,7"
