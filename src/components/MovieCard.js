@@ -9,8 +9,6 @@
 // Filter the movies with title/rating.
 import "./MovieCard.css"
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-import { Col } from "react-bootstrap";
 export default function MovieCard(props) {
     return (
             <Card className="test" >
@@ -19,7 +17,7 @@ export default function MovieCard(props) {
                     <Card.Title className="titleCard">{props.title}</Card.Title>
                     <Card.Text className="subtitleCard">{props.description}</Card.Text>
                 </Card.Body>
-                <Card.Footer><span className="spanFooterCard">Rating : </span><span className="ratingCard">{props.rating}</span>/5</Card.Footer>
+                <Card.Footer><span className="spanFooterCard">Rating : </span><span className="ratingCard">{props.rating}</span>/10</Card.Footer>
             </Card>
     )
 }

@@ -4,14 +4,13 @@ import { Button, CardGroup, Col, Container, Form, Row } from "react-bootstrap";
 import "./App.css"
 import { useState } from "react";
 import NewMovie from "./components/NewMovie";
-import RatingFilter from "./components/Filter";
+import Filter from "./components/Filter";
 
 function App() {
   const [name, setName] = useState("default name");
   const [description, setDescription] = useState("");
   const [posterURL, setposterURL] = useState("");
-  const [rating, setRating] = useState("");
-
+  const [rating, setRating] = useState(0);
   const [listOfMovies, setList] = useState(movieList)
   const handleList = () => {
     setList(previous => [...previous,
@@ -21,12 +20,6 @@ function App() {
     )
   }
 
-  const handleFilterRating = () => {
-    setList( listOfMovies.filter(function (el) {
-      return el.rating > 6;
-    }
-    ))
-  }
 
   const handleName = variable => setName(variable.target.value);
   const handleDescription = event => setDescription(event.target.value);
@@ -36,7 +29,6 @@ function App() {
   return (
     <>
       <h1>Hooks Checkpoint Flix</h1>
-      <RatingFilter handleFilterRating={handleFilterRating}/>
       <NewMovie
         handleDescription={handleDescription}
         handleName={handleName}
@@ -44,17 +36,7 @@ function App() {
         handleRating={handleRating}
       />
       <Button onClick={handleList}>Add movie</Button>
-      <Container >
-        <Row className="justify-content-md-center card-group">
-          {listOfMovies.map(e => {
-            return (
-              <MovieCard title={e.title} description={e.description}
-                posterURL={e.posterURL}
-                rating={e.rating} />
-            )
-          })}
-        </Row>
-      </Container>
+      <Filter list={listOfMovies} />
     </>
   );
 }
