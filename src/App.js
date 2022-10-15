@@ -1,6 +1,6 @@
 import MovieCard from "./components/MovieCard";
 import { movieList } from "./components/MovieList";
-import { Button, CardGroup, Col, Container, Form, Row } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import "./App.css"
 import { useState } from "react";
 import NewMovie from "./components/NewMovie";
@@ -15,7 +15,7 @@ function App() {
   const handleList = () => {
     setList(previous => [...previous,
     {
-      title: name, description: description, posterURL: posterURL, rating: rating
+      key:listOfMovies.length+1 , title: name, description: description, posterURL: posterURL, rating: rating
     }]
     )
   }
@@ -27,17 +27,19 @@ function App() {
   const handleRating = event => setRating(event.target.value);
 
   return (
-    <>
+    <div className="appbody">
       <h1>Hooks Checkpoint Flix</h1>
-      <NewMovie
-        handleDescription={handleDescription}
-        handleName={handleName}
-        handlephotoURL={handlephotoURL}
-        handleRating={handleRating}
-      />
-      <Button onClick={handleList}>Add movie</Button>
+      <div className="newmovie">
+        <NewMovie
+          handleDescription={handleDescription}
+          handleName={handleName}
+          handlephotoURL={handlephotoURL}
+          handleRating={handleRating}
+        />
+        <Button variant="primary" onClick={handleList}>Add New movie</Button>
+      </div>
       <Filter list={listOfMovies} />
-    </>
+    </div>
   );
 }
 
@@ -52,4 +54,4 @@ export default App;
 // OK Every movie should have the following attributes: title, description, posterURL, rating
 // The user should be:
 // OK Able to add a new movie.
-// Filter the movies with title/rating.
+// OK Filter the movies with title/rating.

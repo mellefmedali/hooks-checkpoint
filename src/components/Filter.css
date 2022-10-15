@@ -1,4 +1,11 @@
-.card-group{
+.filterBody{
     display: flex;
     flex-wrap: wrap;
+}
+.filterForm{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
 }
